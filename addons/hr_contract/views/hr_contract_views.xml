@@ -17,7 +17,6 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                <data>
                     <div name="button_box" position="inside">
                         <button name="%(act_hr_employee_2_hr_contract)d"
                             class="oe_stat_button"
@@ -43,7 +42,6 @@
                             </span>
                         </div>
                     </xpath>
-                </data>
             </field>
         </record>
 
@@ -52,7 +50,6 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="//div[hasclass('o_kanban_record_headings')]" position="after">
                     <field name="contract_warning" invisible="1"/>
                         <t t-if="record.contract_warning.raw_value">
@@ -61,7 +58,6 @@
                             aria-label="There is something wrong with the contract. Either there is no running contract for this employee or employee's contract is about to expire."></i>
                         </t>
                     </xpath>
-                </data>
             </field>
         </record>
 
@@ -70,11 +66,9 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_filter"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="." position="inside">
                         <filter string="Contract Warning" name="with_contract_warning" domain="[('contract_warning', '=', True)]"/>
                     </xpath>
-                </data>
             </field>
         </record>
 

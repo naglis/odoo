@@ -6,7 +6,6 @@
         <field name="inherit_id" ref="hr.hr_department_view_kanban"/>
         <field name="groups_id" eval="[(4,ref('hr_recruitment.group_hr_recruitment_user'))]"/>
         <field name="arch" type="xml">
-            <data>
                 <xpath expr="//templates" position="before">
                     <field name="new_applicant_count"/>
                     <field name="new_hired_employee"/>
@@ -46,7 +45,6 @@
                     </div>
                 </xpath>
 
-            </data>
         </field>
     </record>
 

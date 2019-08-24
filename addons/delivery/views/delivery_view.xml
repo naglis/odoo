@@ -226,7 +226,6 @@
             <field name="model">stock.picking</field>
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
-              <data>
                 <xpath expr="//group[@name='other_infos']" position="before">
                     <group name='carrier_data' string="Shipping Information">
                         <field name="is_return_picking" invisible="1"/>
@@ -259,7 +258,6 @@
                 <xpath expr="/form/header/button[last()]" position="after">
                     <button name="print_return_label" string="Print Return Label" type="object" attrs="{'invisible':['|', ('is_return_picking', '=', False),('state', '=', 'done')]}"/>
                 </xpath>
-              </data>
               <xpath expr="//field[@name='partner_id']" position="attributes">
                   <attribute name="attrs">{'required': ['&amp;', ('delivery_type', '!=', False), ('delivery_type', 'not in', ['fixed', 'base_on_rule'])]}</attribute>
               </xpath>
@@ -310,7 +308,6 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="//field[@name='partner_id']" position='after'>
                         <field name="delivery_set" invisible="1"/>
                         <field name="is_all_service" invisible="1"/>
@@ -352,7 +349,6 @@
                     <xpath expr="//field[@name='order_line']/tree" position="attributes">
                         <attribute name="decoration-warning">recompute_delivery_price and is_delivery</attribute>
                     </xpath>
-                </data>
             </field>
         </record>
 

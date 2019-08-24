@@ -5,7 +5,6 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="//button[@name='action_view_invoice']" position="before">
                        <button type="object"
                            name="action_view_project_ids"
@@ -45,7 +44,6 @@
                        <field name="visible_project" invisible="1"/>
                        <field name="project_id" options="{'no_create': True}" attrs="{'invisible': [('visible_project', '=', False)]}"/>
                     </xpath>
-                </data>
            </field>
         </record>
 </odoo>

@@ -31,7 +31,6 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
-                <data>
                     <field name="list_price" position="after">
                         <field name="valuation" invisible="1" readonly="1"/>
                         <field name="cost_method" invisible="1" readonly="1"/>
@@ -50,7 +49,6 @@
                                 class="oe_link pt-0 oe_inline"/>
                         </span>
                     </xpath>
-                </data>
             </field>
         </record>
 
@@ -59,7 +57,6 @@
             <field name="model">product.product</field>
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="arch" type="xml">
-                <data>
                     <field name="standard_price" position="replace">
                         <field name="standard_price"
                             attrs="{'readonly':[('cost_method', '!=', 'fifo')]}"
@@ -74,7 +71,6 @@
                                 class="oe_link pt-0 oe_inline"/>
                         </span>
                     </xpath>
-                </data>
             </field>
         </record>
 
@@ -83,7 +79,6 @@
             <field name="model">product.product</field>
             <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
             <field name="arch" type="xml">
-                <data>
                     <field name="standard_price" position="replace">
                         <field name="valuation" invisible="1" readonly="1"/>
                         <field name="cost_method" invisible="1" readonly="1"/>
@@ -101,7 +96,6 @@
                                 class="oe_inline"/>
                         </div>
                     </field>
-                </data>
             </field>
         </record>
 

@@ -59,7 +59,6 @@
     <field name="model">event.event</field>
     <field name="inherit_id" ref="website_event.event_event_view_form_inherit_website"/>
     <field name="arch" type="xml">
-        <data>
             <xpath expr="//notebook" position="inside">
                 <page string="Questions">
                     <field name="question_ids" nolabel="1">
@@ -72,7 +71,6 @@
                     </field>
                 </page>
             </xpath>
-       </data>
     </field>
 </record>
 

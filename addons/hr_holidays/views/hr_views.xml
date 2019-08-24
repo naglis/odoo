@@ -20,7 +20,6 @@
         <field name="inherit_id" ref="hr.hr_department_view_kanban"/>
         <field name="groups_id" eval="[(4,ref('hr_holidays.group_hr_holidays_user'))]"/>
         <field name="arch" type="xml">
-            <data>
                 <xpath expr="//templates" position="before">
                     <field name="leave_to_approve_count"/>
                     <field name="allocation_to_approve_count"/>
@@ -92,7 +91,6 @@
                     </div>
                 </xpath>
 
-            </data>
         </field>
     </record>
 

@@ -7,7 +7,6 @@
         <field name="inherit_id" ref="hr.hr_department_view_kanban"/>
         <field name="groups_id" eval="[(4,ref('hr_attendance.group_hr_attendance_user'))]"/>
         <field name="arch" type="xml">
-            <data>
 
                 <xpath expr="//div[hasclass('o_kanban_manage_reports')]" position="inside">
                     <div class="row">
@@ -19,7 +18,6 @@
                     </div>
                 </xpath>
 
-            </data>
         </field>
     </record>
 </odoo>

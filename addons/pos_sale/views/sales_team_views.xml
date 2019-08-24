@@ -35,7 +35,6 @@
         <field name="model">crm.team</field>
         <field name="inherit_id" ref="sales_team.crm_team_salesteams_view_kanban"/>
         <field name="arch" type="xml">
-        <data>
             <xpath expr="//t[@name='first_options']" position="before">
                 <div class="row" t-if="record.pos_sessions_open_count.raw_value">
                     <div class="col-8">
@@ -51,7 +50,6 @@
                 </div>
             </xpath>
 
-        </data>
         </field>
     </record>
 

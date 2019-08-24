@@ -1140,7 +1140,6 @@
             <field name="model">account.move</field>
             <field name="inherit_id" ref="account.view_move_form"/>
             <field name="arch" type="xml">
-                <data>
                     <xpath expr="//field[@name='partner_id']" position="after">
                        <field name="partner_shipping_id"
                               groups="sale.group_delivery_invoice_address"
@@ -1162,7 +1161,6 @@
                             <field name="source_id"/>
                         </group>
                     </xpath>
-                </data>
             </field>
         </record>
 

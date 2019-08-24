@@ -129,7 +129,6 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base_geolocalize.view_crm_partner_geo_form"/>
         <field name="arch" type="xml">
-            <data>
                 <xpath expr="//page[@name='geo_location']" position="inside">
                     <group>
                         <group>
@@ -149,7 +148,6 @@
                 <xpath expr="//group[@name='sale']" position="inside">
                     <field name="assigned_partner_id" groups="base.group_no_one"/>
                 </xpath>
-            </data>
         </field>
     </record>
 

@@ -200,7 +200,6 @@
             <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="arch" type="xml">
-                <data>
                     <header position="inside">
                         <button string="Update Quantity" type="object"
                             groups="stock.group_stock_manager"
@@ -281,7 +280,6 @@
                     <xpath expr="//field[@name='product_tmpl_id']" position="attributes">
                         <attribute name="context">{'quantity_available_locations_domain': ('internal',)}</attribute>
                     </xpath>
-                </data>
             </field>
         </record>
 
@@ -292,7 +290,6 @@
             <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
-                <data>
                     <header position="inside" >
                         <button string="Update Quantity" type="object"
                             groups="stock.group_stock_manager"
@@ -384,7 +381,6 @@
                     <xpath expr="//group[@name='group_lots_and_weight']" position="inside">
                         <field name="responsible_id"/>
                     </xpath>
-                </data>
             </field>
         </record>
 

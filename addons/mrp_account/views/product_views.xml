@@ -40,7 +40,6 @@
             <field name="model">product.product</field>
             <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
             <field name="arch" type="xml">
-                <data>
                 <xpath expr="//div[@name='update_cost_price']" position="inside">
                     <field name="bom_count" invisible="1"/>
                     <button name="button_bom_cost"
@@ -50,7 +49,6 @@
                         help="Compute the price of the product using products and operations of related bill of materials, for manufactured products only."
                         class="oe_link oe_read_only pt-0"/>
                 </xpath>
-                </data>
             </field>
         </record>
 
